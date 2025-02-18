@@ -1,0 +1,15 @@
+{
+  "Header": {
+    "search": "Search contacts...",
+    "cancel": "Cancel",
+    "add": "Add contact",
+    "settings": "Settings",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "ContactList": {
+    "noContacts": "No contacts found"
+  }
+}
+

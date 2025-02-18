@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 168 89% 90%;
+    --foreground: 207 54% 46%;
+
+    --card: 168 89% 95%;
+    --card-foreground: 207 54% 46%;
+
+    --popover: 168 89% 95%;
+    --popover-foreground: 207 54% 46%;
+
+    --primary: 207 54% 46%;
+    --primary-foreground: 168 89% 95%;
+
+    --secondary: 207 35% 57%;
+    --secondary-foreground: 168 89% 95%;
+
+    --muted: 191 89% 80%;
+    --muted-foreground: 207 54% 46%;
+
+    --accent: 191 89% 80%;
+    --accent-foreground: 207 54% 46%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 191 89% 80%;
+    --input: 191 89% 80%;
+    --ring: 207 54% 46%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 5% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 300 36% 17%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 300 36% 17%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 328 56% 27%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 328 56% 38%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 328 24% 38%;
+    --muted-foreground: 328 24% 75%;
+
+    --accent: 328 24% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 328 36% 27%;
+    --input: 328 36% 27%;
+    --ring: 328 56% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
